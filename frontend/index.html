@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio</title>
+<meta name="description" content="Developer portfolio powered by a custom CMS.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="progress"></div>
+<nav><div class="wrap"><a class="logo" href="#top" id="logo">Portfolio</a>
+<div class="links"><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#services">Services</a><a href="#blog">Blog</a><a href="#contact">Contact</a></div>
+<button class="btn ghost sm" id="openPal" aria-label="Search the site">Search <span class="kbd">Ctrl K</span></button>
+<button class="btn ghost sm" id="theme" aria-label="Switch light or dark theme">Theme</button></div></nav>
+<div id="apiErr" class="banner" hidden>Cannot reach the API. Start the backend with <b>npm run dev</b> and refresh.</div>
+<main id="top">
+<div class="hero"><div class="wrap"><div>
+<h1 id="hName">&nbsp;</h1><div class="role" id="typed"></div><p class="bio" id="hBio"></p>
+<div class="row"><a class="btn" href="#projects">See my projects</a><a class="btn ghost" href="#contact">Get in touch</a></div>
+<div class="row" id="social"></div></div><div class="avatar" id="avatar"></div></div></div>
+<div class="wrap"><div class="statrow" id="stats"></div></div>
+<section id="skills"><div class="wrap"><h2>Skills</h2><div class="skills" id="skillList"><div class="skel"></div></div></div></section>
+<section id="projects"><div class="wrap"><h2>Projects</h2><div class="chips" id="chips"></div><div class="grid" id="projList"><div class="skel"></div></div></div></section>
+<section id="experience"><div class="wrap"><h2>Experience</h2><div class="tl" id="expList"></div></div></section>
+<section id="services"><div class="wrap"><h2>Services</h2><div class="grid" id="svcList"></div></div></section>
+<section id="testimonials"><div class="wrap"><h2>What people say</h2><div class="card quote" id="quote"></div><div class="dots" id="dots"></div></div></section>
+<section id="blog"><div class="wrap"><h2>Blog</h2><div class="grid" id="blogList"><div class="skel"></div></div></div></section>
+<section id="contact"><div class="wrap"><h2>Contact</h2><div class="card" style="max-width:520px">
+<label for="cn">Name</label><input id="cn" autocomplete="name"><label for="ce">Email</label><input id="ce" type="email" autocomplete="email"><label for="cm">Message</label><textarea id="cm"></textarea>
+<div class="err" id="cerr"></div><p style="margin-top:14px"><button class="btn" id="send">Send message</button></p><div class="ok" id="cok"></div></div></div></section>
+</main>
+<footer class="f"><div class="wrap"><span id="fName"></span><span id="fVisits"></span><a href="admin/">Admin login</a></div></footer>
+<dialog id="post"><h2 id="pTitle"></h2><small id="pMeta" style="color:var(--mut)"></small><div class="txt" id="pBody" style="margin-top:16px"></div><p style="margin-top:16px"><button class="btn ghost" id="pClose">Close</button></p></dialog>
+<dialog id="pal"><input id="palq" placeholder="Jump to a section, project or post" aria-label="Search"><ul id="pall"></ul></dialog>
+<script src="js/config.js"></script><script src="js/api.js"></script><script src="js/site.js"></script>
+</body>
+</html>
